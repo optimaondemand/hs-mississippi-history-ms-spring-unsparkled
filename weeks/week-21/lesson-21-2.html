@@ -1,0 +1,525 @@
+<!--
+    Optima Academy Online - INTERACTIVE Student Lesson Page.
+    Mississippi History - Freedom Behind the Lines
+    DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
+    Delete the .preview-banner before deploying.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mississippi History &mdash; Freedom Behind the Lines</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">MISSISSIPPI HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Freedom Behind the Lines</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+<!-- ===== READ-ALOUD PLAYER ===== -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }], one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }], one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ===== END READ-ALOUD PLAYER ===== -->
+
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Freedom Behind the Lines</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Nobody asked enslaved Mississippians whether the war was theirs. Thousands answered anyway, by walking toward the Union lines.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">More than half of Mississippi's people were enslaved in 1860. This lesson follows what happened to them when the armies came. It looks at how enslaved people took chances to free themselves, how the Union army both used and failed them, why thousands joined the Union army as soldiers, and why slavery fell apart so unevenly across the state.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Union advances created chances for enslaved Mississippians to escape slavery.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the roles Black Mississippians played in the war as laborers and as soldiers.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why slaveholders moved enslaved people away from the Union lines.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why slavery ended unevenly across the state.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Internet access to view this lesson page and its linked primary sources</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or digital document for your reading notes</div>
+        </div>
+    </div>
+
+    <!-- GLOSSARY -->
+    <div id="glossary" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 12px;">A few words in this lesson are worth reviewing before you read.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">contraband</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(KON-truh-band)</span> <button type="button" class="gloss-audio" data-say="contraband" aria-label="Hear how to say contraband" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: in the Civil War, a name Union officers gave to enslaved people who escaped to Union lines, treating them as property of war.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">emancipation</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(ih-man-suh-PAY-shuhn)</span> <button type="button" class="gloss-audio" data-say="emancipation" aria-label="Hear how to say emancipation" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: the act of freeing people from slavery.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">freedpeople</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(FREED-pee-puhl)</span> <button type="button" class="gloss-audio" data-say="freedpeople" aria-label="Hear how to say freedpeople" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: men, women, and children who had been enslaved and were now free.</div>
+        <div><strong style="color: #0E1C42; font-size: 17px;">regiment</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(REJ-uh-ment)</span> <button type="button" class="gloss-audio" data-say="regiment" aria-label="Hear how to say regiment" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a large unit of soldiers, usually made up of about a thousand men.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WALKING TOWARD THE LINES</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Freedom on the Move</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Slavery in Mississippi did not end in a single day. It broke apart wherever Union armies came. When soldiers reached a county, enslaved people left plantations, often in families, carrying what they could. Some brought information that helped the army. According to Grant's own account, an enslaved man helped him find the road from Bruinsburg. Others simply took the first chance to walk away.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Union policy at first was unclear. Union officers called these people <a href="#glossary" title="in the Civil War, a name Union officers gave to enslaved people who escaped to Union lines, treating them as property of war." style="color: inherit; text-decoration: underline dotted;"><strong>contraband</strong></a>, meaning property of war, and put many of them to work. Grant put a chaplain named John Eaton in charge of caring for the <a href="#glossary" title="men, women, and children who had been enslaved and were now free." style="color: inherit; text-decoration: underline dotted;"><strong>freedpeople</strong></a> who gathered around his army. Camps formed near Corinth, Holly Springs, and Vicksburg. The <a href="#glossary" title="the act of freeing people from slavery." style="color: inherit; text-decoration: underline dotted;"><strong>Emancipation</strong></a> Proclamation, which took effect on January 1, 1863, declared enslaved people free in areas still in rebellion. In Mississippi, that promise could only be kept where Union soldiers stood.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not every Union soldier welcomed the <a href="#glossary" title="men, women, and children who had been enslaved and were now free." style="color: inherit; text-decoration: underline dotted;"><strong>freedpeople</strong></a>. Some treated them kindly. Others stole from them or looked down on them, and early in the war a few officers even sent runaways back to their owners. The army was fighting to save the Union, and its leaders were still deciding what to do about slavery. The people who walked toward the lines helped decide it for them.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Freedom came at a heavy price. The camps were crowded, and food and medicine were short. Disease killed many people who had just escaped slavery. The Union army needed their labor and often did not do enough to protect their health. Even so, thousands chose the risk over staying where they were. Mothers walked miles with small children, and elders who could not make the trip were sometimes left behind with relatives, because staying together was not always possible.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many <a href="#glossary" title="men, women, and children who had been enslaved and were now free." style="color: inherit; text-decoration: underline dotted;"><strong>freedpeople</strong></a> wanted what any family wants: to stay together, to work for themselves, and to own land. Slavery had broken thousands of families apart through sales, and <a href="#glossary" title="men, women, and children who had been enslaved and were now free." style="color: inherit; text-decoration: underline dotted;"><strong>freedpeople</strong></a> searched for lost children, parents, and spouses in the war's wake. Those searches would continue for years.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Pause here. Picture yourself enslaved in a Mississippi county when Union soldiers appear on the road. What would you weigh first? (No wrong answer, just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="Many freedpeople wanted just that. Slavery had broken thousands of families apart, and staying together was not always possible, even for those who made the walk.">&#128106; Keeping my family together</button>
+                <button data-response="The risk was real. The camps were crowded, food and medicine were short, and disease killed many. Even so, thousands chose the risk.">&#9888;&#65039; The danger of leaving</button>
+                <button data-response="Some brought information that helped the army. According to Grant&rsquo;s own account, an enslaved man helped him find the road from Bruinsburg.">&#128483;&#65039; What I know that could help the army</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; DAVIS BEND</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Place Called Davis Bend</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Davis Bend was a loop of land in the river south of Vicksburg. It held two plantations: Brierfield, owned by Jefferson Davis, and Hurricane, owned by his older brother Joseph. Joseph Davis ran his plantation in an unusual way, with some self-government for the people he enslaved. One of them, Benjamin Montgomery, learned to read and ran the plantation store.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">When Union forces reached the area, the Davis family left. Federal officers turned Davis Bend into a refuge for <a href="#glossary" title="men, women, and children who had been enslaved and were now free." style="color: inherit; text-decoration: underline dotted;"><strong>freedpeople</strong></a>, who farmed the land and, by 1864 and 1865, ran much of their own community. Some raised cotton and sold it for good prices. Davis Bend is an example of what <a href="#glossary" title="men, women, and children who had been enslaved and were now free." style="color: inherit; text-decoration: underline dotted;"><strong>freedpeople</strong></a> might do when given a chance. It is also a reminder that the chance depended on the Union army staying close. You will meet Benjamin Montgomery's family again in this course.</p>
+        <div class="optima-widget ow-flipcard">
+            <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+            <div class="ow-flip" tabindex="0">
+                <div class="ow-flip-front" style="font-size:17px;color:#0E1C42;line-height:1.55;">Davis Bend sat in a loop of the river south of Vicksburg. Who owned its two plantations, and what happened when Union forces arrived? Make your guess, then tap the card.</div>
+                <div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Jefferson Davis owned Brierfield, and his older brother Joseph owned Hurricane. When Union forces came, the Davis family left, and federal officers made the bend a refuge where freedpeople farmed the land and ran much of their own community. The chance depended on the Union army staying close.</div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; BLACK SOLDIERS AND LABORERS</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Taking Up Arms and Shovels</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1863, the Union army began to enlist Black soldiers on a large scale. General Lorenzo Thomas recruited in the Mississippi Valley in the first half of 1863, and <a href="#glossary" title="a large unit of soldiers, usually made up of about a thousand men." style="color: inherit; text-decoration: underline dotted;"><strong>regiments</strong></a> formed in Vicksburg, Natchez, and Corinth. Thousands of Black Mississippians served, by some counts more than 17,000. They fought in battles, guarded railroads and towns, and faced harsher treatment if captured. At first they were paid less than white soldiers. The pay was made equal in 1864.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">These soldiers fought for their own freedom and for the freedom of their families. When Black <a href="#glossary" title="a large unit of soldiers, usually made up of about a thousand men." style="color: inherit; text-decoration: underline dotted;"><strong>regiments</strong></a> marched through Mississippi towns, many white residents reacted with fear and anger, and many Black residents with joy. A soldier's uniform was a public claim to citizenship.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A Black minister named Hiram Revels, who had been born free in North Carolina, came to Vicksburg in 1864 as a chaplain with Black troops. He helped start a school there. Remember his name, because you will meet him again.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Confederate armies also depended on Black labor, but in a different way. They forced thousands of enslaved men to dig trenches, drive wagons, and cook. These men worked under compulsion. They were not free volunteers.</p>
+        <div class="optima-widget ow-reveal">
+            <div class="widget-kicker">&#9999;&#65039; TRY IT FIRST</div>
+            <details><summary>In your notebook, write two sentences: one on how Black Mississippians served the Union, and one on how Confederate armies used Black labor. Then click here to compare.</summary><div class="reveal-body">A strong answer might say: <em>Thousands of Black Mississippians, by some counts more than 17,000, joined Union regiments formed at Vicksburg, Natchez, and Corinth, and they fought for their own freedom and their families&rsquo; freedom.</em> And: <em>Confederate armies forced thousands of enslaved men to dig trenches, drive wagons, and cook, and these men worked under compulsion, not as free volunteers.</em></div></details>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; SLAVERY BREAKS UNEVENLY</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Chance, Place, and Power</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many slaveholders tried to keep their workers away from the Union lines. They marched enslaved men, women, and children east into the Piney Woods or hundreds of miles west to Texas. Where Confederate control held, slavery lasted until the war was nearly over, and some enslaved people did not learn they were free for weeks or months. So the end of slavery in Mississippi depended on where a person lived, which army was near, and what choices that person made.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">There was nothing automatic about any of this. Freedom came because enslaved people took risks, because the Union army arrived, and because the Confederacy lost the power to hold them. A system that depends on constant force is only as strong as that force. When the force weakened, the system began to give way. The old Mississippi was ending, and the people who understood it first were the ones it had held in bondage. As you prepare for this module's discussion, ask whose war it was, and who fought it without being asked.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; CHECK YOUR UNDERSTANDING</div>
+            <div class="widget-row" data-correct="c" data-hint="Think about the original meaning of the word." data-fb="Right. The word treated people as property of war, even as the army began to protect them.">
+                <div class="widget-row-prompt">In the Civil War, what did Union officers mean by the word contraband when they used it for escaped enslaved people?</div>
+                <div class="widget-options">
+                    <button data-choice="a">A military rank.</button>
+                    <button data-choice="b">A person who had been paid for their labor.</button>
+                    <button data-choice="c">Property of war that the Union could put to use.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Recall what the Emancipation Proclamation could and could not enforce." data-fb="Right. Freedom spread where Union soldiers reached, and lagged where Confederate control held.">
+                <div class="widget-row-prompt">Why did slavery end at different times in different parts of Mississippi?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Different laws applied in different counties.</button>
+                    <button data-choice="b">It depended on where the Union army stood and where Confederate control held.</button>
+                    <button data-choice="c">Each county voted on whether to end slavery.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Think about the word compulsion." data-fb="Right. These men were forced to work, not free volunteers.">
+                <div class="widget-row-prompt">Which statement about Confederate use of Black labor is most accurate?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Enslaved men volunteered to dig trenches and drive wagons.</button>
+                    <button data-choice="b">Black men served as free soldiers in Confederate regiments from the start.</button>
+                    <button data-choice="c">Enslaved men were forced to work for the army.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Letter or Petition from a Black Union Soldier</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read a Black Mississippi soldier's own words.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report and discussion</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Complete these in Canvas once you have finished both of this module's lessons.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">By 1864, Mississippi was a state of broken fences, hungry families, and people on the move. In the next module, you will see how the Confederacy collapsed in the state and how Mississippi answered when the war ended.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Freedom Behind the Lines</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+
+<!-- ===== GLOSSARY AUDIO ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.gloss-audio');
+    if (!b || !('speechSynthesis' in window)) return;
+    var stop = document.getElementById('ora-stop');
+    if (stop && !stop.disabled) stop.click();
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(b.getAttribute('data-say'));
+    u.rate = 0.85;
+    var vs = window.speechSynthesis.getVoices().filter(function (v) { return /^en/i.test(v.lang); });
+    var v = vs.filter(function (x) { return /natural/i.test(x.name); })[0] || vs.filter(function (x) { return /google us english/i.test(x.name); })[0] || vs[0];
+    if (v) u.voice = v;
+    window.speechSynthesis.speak(u);
+  });
+})();
+</script>
+</body>
+</html>

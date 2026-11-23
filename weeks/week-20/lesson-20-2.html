@@ -1,0 +1,535 @@
+<!--
+    Optima Academy Online - INTERACTIVE Student Lesson Page.
+    Mississippi History - Module 20 - Lesson 20.2
+    DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
+    Delete the .preview-banner before deploying.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mississippi History &mdash; Lesson 20.2</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">MISSISSIPPI HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3 &middot; Module 20</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 20.2</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Forty-Seven Days at Vicksburg</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+<!-- ===== READ-ALOUD PLAYER ===== -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "▶️ Listen";
+    var LABEL_PAUSE  = "⏸️ Pause";
+    var LABEL_RESUME = "▶️ Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }], one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }], one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[”"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "Reading… " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ===== END READ-ALOUD PLAYER ===== -->
+
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 20.2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Forty-Seven Days at Vicksburg</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Grant could not take Vicksburg by storm, so he surrounded it and waited. For forty-seven days, an entire city lived under fire.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">After a fast march through central Mississippi, Grant pinned Pemberton's army inside Vicksburg. This lesson follows the <a href="#glossary" title="a long effort to capture a place by surrounding it and cutting off its supplies." style="color: inherit; text-decoration: underline dotted;"><strong>siege</strong></a> itself: what soldiers and civilians suffered, why no rescue came, and why Pemberton finally surrendered on July 4, 1863. It also raises a hard question you will take up in this module's discussion: could the city have held?</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how Grant moved from Bruinsburg to the gates of Vicksburg.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how a siege works and what daily life was like inside Vicksburg.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Confederate forces outside the city did not relieve it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> evaluate whether Vicksburg could have held out longer.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Internet access to view this lesson page and its linked primary sources</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or digital document for your reading notes</div>
+        </div>
+    </div>
+
+    <!-- GLOSSARY -->
+    <div id="glossary" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 12px;">A few words in this lesson are worth reviewing before you read.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">battery</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(BAT-uh-ree)</span> <button type="button" class="gloss-audio" data-say="battery" aria-label="Hear how to say battery" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a group of large guns, or cannons, set up together in one place.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">bluff</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(bluff)</span> <button type="button" class="gloss-audio" data-say="bluff" aria-label="Hear how to say bluff" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a high, steep bank beside a river or the sea.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">garrison</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(GAIR-uh-suhn)</span> <button type="button" class="gloss-audio" data-say="garrison" aria-label="Hear how to say garrison" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: the soldiers stationed in a fort or town to defend it.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">parole</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(puh-ROHL)</span> <button type="button" class="gloss-audio" data-say="parole" aria-label="Hear how to say parole" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a prisoner's promise, in exchange for release, not to fight again until officially exchanged.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">siege</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(seej)</span> <button type="button" class="gloss-audio" data-say="siege" aria-label="Hear how to say siege" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a long effort to capture a place by surrounding it and cutting off its supplies.</div>
+        <div><strong style="color: #0E1C42; font-size: 17px;">supply line</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(suh-PLY line)</span> <button type="button" class="gloss-audio" data-say="supply line" aria-label="Hear how to say supply line" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: the route that carries food, ammunition, and other goods from an army's base to its soldiers.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THREE WEEKS THAT DECIDED IT</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">From Bruinsburg to the Trenches</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">After the landing, Grant won a fight at Port Gibson on May 1 and then did something his enemies did not expect. He turned northeast, away from Vicksburg, toward Jackson, where Johnston had begun to gather troops. His men beat the Confederates at Raymond on May 12 and took Jackson on May 14. Sherman's soldiers burned much of the city's factory district before the army moved on.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Grant then turned west. On May 16, at Champion Hill, he met Pemberton's army in the largest battle of the campaign and won it. The Confederates fell back across the Big Black River and into the defenses of Vicksburg. In less than three weeks, Grant's army had marched roughly 180 miles and won five battles while cut off from its main supplies.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Look at what that march meant in practice. Grant had left his main <a href="#glossary" title="the route that carries food, ammunition, and other goods from an army&#39;s base to its soldiers." style="color: inherit; text-decoration: underline dotted;"><strong>supply line</strong></a> behind, and he had to keep his army fed from the countryside. Each Confederate <a href="#glossary" title="a group of large guns, or cannons, set up together in one place." style="color: inherit; text-decoration: underline dotted;"><strong>battery</strong></a> that did not fire on his column, and each bridge that was not burned in time, gave him another day. A few mistakes by the defenders turned a risky plan into a winning one. A few more by Grant could have turned it into a disaster.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Grant hoped to finish things at once. His soldiers attacked the Confederate lines on May 19 and again on May 22. Both attacks failed, and the second cost the Union thousands of men. Grant decided that he would not throw away more lives. He would starve the city out.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; PUT IT IN ORDER</div>
+            <div class="widget-question">Use the dates in the lesson to place each event.</div>
+            <div class="widget-row" data-correct="b" data-hint="Check the dates. The march began right after the landing at Bruinsburg." data-fb="Right. The fight at Port Gibson on May 1 came first.">
+                <div class="widget-row-prompt">Which happened first in Grant&rsquo;s march after the landing?</div>
+                <div class="widget-options"><button data-choice="a">The battle at Champion Hill</button><button data-choice="b">The fight at Port Gibson</button><button data-choice="c">The capture of Jackson</button></div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="After Jackson, Grant turned west toward Pemberton. Look for the battle that followed within days." data-fb="Right. Grant turned west and met Pemberton at Champion Hill on May 16.">
+                <div class="widget-row-prompt">Which came next after Grant&rsquo;s army took Jackson on May 14?</div>
+                <div class="widget-options"><button data-choice="a">The failed Union attack of May 22</button><button data-choice="b">Pemberton&rsquo;s surrender</button><button data-choice="c">The battle at Champion Hill</button></div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Two of these happened in mid-May, before the Confederates fell back to Vicksburg. Which came after?" data-fb="Right. After the attack of May 22 failed, Grant chose to starve the city out.">
+                <div class="widget-row-prompt">Which of these came last?</div>
+                <div class="widget-options"><button data-choice="a">The second failed attack on the Confederate lines</button><button data-choice="b">The victory at Raymond</button><button data-choice="c">The battle at Champion Hill</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; LIFE UNDER SIEGE</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Soldiers, Civilians, and Caves</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A <a href="#glossary" title="a long effort to capture a place by surrounding it and cutting off its supplies." style="color: inherit; text-decoration: underline dotted;"><strong>siege</strong></a> is a waiting game. Grant's army, which grew to more than seventy thousand men, dug trenches that crept closer to the Confederate lines each day. Union cannon and gunboats shelled the city day and night. Inside, the <a href="#glossary" title="the soldiers stationed in a fort or town to defend it." style="color: inherit; text-decoration: underline dotted;"><strong>garrison</strong></a> of about thirty thousand soldiers watched its food and ammunition shrink.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The fighting did not stop while the armies waited. Union engineers dug a tunnel under one of the Confederate forts and exploded a mine there on June 25. Union soldiers rushed in, but the Confederates held the breach. Heavy guns, many of them set in new batteries on the ridges, pounded the city. Sharpshooters on both sides picked off anyone who showed his head above the trenches. In some quiet stretches, soldiers shouted across the lines and traded coffee for tobacco.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Thousands of civilians were trapped inside as well. Many dug caves into the soft hillsides, and some families hung curtains and set out rugs. One of them, Mary Ann Loughborough, whose husband was a Confederate officer, lived in a cave with her young daughter and later wrote a book about it. You will read part of her account in this module's primary source.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">As weeks passed, rations fell. By many accounts, soldiers and civilians ate mule meat and bread made from ground field peas. Illness spread among men who were hungry and exhausted. Enslaved people were in the city too. Some were forced to dig Confederate trenches and to work under the same shelling, and others slipped away into Union lines whenever they could.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">You have just read about life under siege. If you had been inside Vicksburg, what would have worried you most? (No wrong answer, just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="Hunger grew steadily. By many accounts, people ate mule meat and bread made from ground field peas, and illness spread among the hungry and exhausted.">&#127838; Running out of food</button>
+                <button data-response="Union cannon and gunboats shelled the city day and night, which is why many families dug caves into the soft hillsides.">&#128165; The shelling</button>
+                <button data-response="Pemberton hoped Johnston would bring an army to save him. The next part of the lesson shows whether help ever came.">&#128236; Not knowing if help was coming</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; NO RESCUE</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Johnston, Pemberton, and the Fourth of July</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Pemberton hoped Johnston would bring an army to save him. Johnston gathered a force east of the Big Black River, but he believed it was too small to break Grant's lines, and he never attacked. Pemberton, for his part, felt bound by orders to hold the city. The two men never agreed on a plan, and no relief arrived. That was a failure of command as much as a failure of strength.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On July 3, Pemberton asked Grant for terms. Grant first demanded surrender without conditions, then agreed to <a href="#glossary" title="a prisoner&#39;s promise, in exchange for release, not to fight again until officially exchanged." style="color: inherit; text-decoration: underline dotted;"><strong>parole</strong></a> the <a href="#glossary" title="the soldiers stationed in a fort or town to defend it." style="color: inherit; text-decoration: underline dotted;"><strong>garrison</strong></a>, which meant sending the soldiers home on a promise not to fight again until exchanged. It was practical. Feeding and moving nearly thirty thousand prisoners would have strained his own army. The surrender took place on July 4, 1863, one day after the end of the Battle of Gettysburg in Pennsylvania.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Port Hudson, Louisiana, fell five days later, and the Union held the whole river. Texas, Louisiana, and Arkansas were cut off from the rest of the Confederacy. Later that summer, Lincoln wrote that "the Father of Waters again goes unvexed to the sea." For Mississippi, the cost was heavy. Two armies had stripped much of the countryside, the river trade that carried the state's cotton to market now ran under Union control, and the high <a href="#glossary" title="a high, steep bank beside a river or the sea." style="color: inherit; text-decoration: underline dotted;"><strong>bluffs</strong></a> that had made Vicksburg so strong stood in enemy hands. Local tradition holds that Vicksburg did not hold a large Fourth of July celebration for generations afterward, although historians disagree about how strictly that was true.</p>
+        <div class="optima-widget ow-reveal">
+            <div class="widget-kicker">&#9999;&#65039; TRY IT FIRST</div>
+            <details><summary>In your notebook, write two or three sentences answering this question: why did no one rescue Vicksburg&rsquo;s garrison? Name at least two people and say what each did or did not do. Then click here to compare.</summary><div class="reveal-body">A strong answer might say: <em>Johnston gathered a force east of the Big Black River, but he believed it was too small to break Grant&rsquo;s lines, so he never attacked. Pemberton felt bound by his orders to hold the city. The two men never agreed on a plan, and no relief arrived.</em> The lesson calls this a failure of command as much as a failure of strength.</div></details>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; COULD IT HAVE HELD?</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Weighing the Choices</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians still argue about whether Vicksburg could have held. Some say Pemberton should have abandoned the city while he still had an army to save. Others blame Johnston for refusing to attack Grant from behind. Still others say the Confederacy simply lacked the men and supplies to defend two fronts at once. Each answer assumes a different choice by a different person.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">War is the hardest test of a state. A government that cannot coordinate its defense has failed at one of its most basic jobs. The people of Vicksburg showed courage. But courage in individuals could not fix a divided command, and it could not feed a city that was cut off.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; CHECK YOUR UNDERSTANDING</div>
+            <div class="widget-row" data-correct="a" data-hint="Think about what threatened Grant&#39;s rear." data-fb="Right. Grant did not want to besiege Vicksburg with a Confederate army behind him.">
+                <div class="widget-row-prompt">Grant's army moved away from Vicksburg to Jackson before attacking the city. Why?</div>
+                <div class="widget-options">
+                    <button data-choice="a">Johnston was gathering Confederate troops there, and Grant wanted to deal with them first.</button>
+                    <button data-choice="b">Grant had lost the way after the crossing.</button>
+                    <button data-choice="c">Lincoln had ordered him to take the capital.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Consider what Grant&#39;s army still had to do." data-fb="Right. Parole saved Grant the burden of guarding and feeding a very large number of prisoners.">
+                <div class="widget-row-prompt">Why did Grant parole the Confederate garrison and not send it north as prisoners?</div>
+                <div class="widget-options">
+                    <button data-choice="a">He felt sorry for the Confederates.</button>
+                    <button data-choice="b">Moving and feeding nearly thirty thousand prisoners would have been a burden for his army.</button>
+                    <button data-choice="c">Lincoln demanded it.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Recall what Johnston chose to do with the force he had." data-fb="Right. Johnston believed his force was too small, and no relief ever reached the city.">
+                <div class="widget-row-prompt">True or false: Johnston never attacked Grant, so no relief army reached the city.</div>
+                <div class="widget-options">
+                    <button data-choice="a">True</button>
+                    <button data-choice="b">False</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 20.2: Mary Ann Loughborough, My Cave Life in Vicksburg (1864)</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read her own account of living in a cave during the siege.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Module 20 VR activity and discussion</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Complete these in Canvas once you have finished both of this module's lessons.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">With Vicksburg and Port Hudson in Union hands, the river was open. In the next module, you will look at Mississippians who were not on the battle lines at all: women on farms, families facing hunger, and enslaved people who found their own ways to freedom.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 20.2 &middot; Forty-Seven Days at Vicksburg</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+
+<!-- ===== GLOSSARY AUDIO ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.gloss-audio');
+    if (!b || !('speechSynthesis' in window)) return;
+    var stop = document.getElementById('ora-stop');
+    if (stop && !stop.disabled) stop.click();
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(b.getAttribute('data-say'));
+    u.rate = 0.85;
+    var vs = window.speechSynthesis.getVoices().filter(function (v) { return /^en/i.test(v.lang); });
+    var v = vs.filter(function (x) { return /natural/i.test(x.name); })[0] || vs.filter(function (x) { return /google us english/i.test(x.name); })[0] || vs[0];
+    if (v) u.voice = v;
+    window.speechSynthesis.speak(u);
+  });
+})();
+</script>
+</body>
+</html>

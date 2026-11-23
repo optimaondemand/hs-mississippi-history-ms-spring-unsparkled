@@ -1,0 +1,529 @@
+<!--
+    Optima Academy Online - INTERACTIVE Student Lesson Page.
+    Mississippi History - Peace and the Black Codes
+    DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
+    Delete the .preview-banner before deploying.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mississippi History &mdash; Peace and the Black Codes</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">MISSISSIPPI HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Peace and the Black Codes</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+<!-- ===== READ-ALOUD PLAYER ===== -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }], one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }], one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ===== END READ-ALOUD PLAYER ===== -->
+
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Peace and the Black Codes</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">In the autumn of 1865, a state with hundreds of thousands of newly freed people had to write its first peacetime laws. What it wrote shocked the North.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The war ended in April and May of 1865, but nobody knew yet what peace would look like. President Andrew Johnson gave Southern states a quick path back into the Union. This lesson follows Mississippi through that summer and autumn: the new government, the refusal to <a href="#glossary" title="to approve an amendment or treaty so that it officially takes effect." style="color: inherit; text-decoration: underline dotted;"><strong>ratify</strong></a> the Thirteenth Amendment, and the <a href="#glossary" title="laws passed in Southern states in 1865 and 1866 that limited the rights and freedom of Black people." style="color: inherit; text-decoration: underline dotted;"><strong>Black Codes</strong></a>, a set of laws that limited the freedom of the people who had just been freed.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how President Johnson's plan returned political power to white Mississippians.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the main provisions of the Mississippi Black Codes.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how freedpeople and the Freedmen's Bureau responded.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why Congress and many Northerners reacted so strongly.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Internet access to view this lesson page and its linked primary sources</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or digital document for your reading notes</div>
+        </div>
+    </div>
+
+    <!-- GLOSSARY -->
+    <div id="glossary" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 12px;">A few words in this lesson are worth reviewing before you read.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">amnesty</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(AM-nuh-stee)</span> <button type="button" class="gloss-audio" data-say="amnesty" aria-label="Hear how to say amnesty" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: an official pardon, usually for a group of people, for crimes against the government.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">Black Codes</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(blak kohdz)</span> <button type="button" class="gloss-audio" data-say="Black Codes" aria-label="Hear how to say Black Codes" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: laws passed in Southern states in 1865 and 1866 that limited the rights and freedom of Black people.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">Freedmen's Bureau</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(FREED-menz BYOOR-oh)</span> <button type="button" class="gloss-audio" data-say="Freedmen's Bureau" aria-label="Hear how to say Freedmen's Bureau" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a federal agency, created in 1865, that helped freed people with food, schools, and labor contracts.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">provisional</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(pruh-VIZH-uh-nuhl)</span> <button type="button" class="gloss-audio" data-say="provisional" aria-label="Hear how to say provisional" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: temporary, meant to last only until a permanent arrangement is made.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">ratify</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(RAT-uh-fy)</span> <button type="button" class="gloss-audio" data-say="ratify" aria-label="Hear how to say ratify" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: to approve an amendment or treaty so that it officially takes effect.</div>
+        <div><strong style="color: #0E1C42; font-size: 17px;">vagrancy</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(VAY-gruh-see)</span> <button type="button" class="gloss-audio" data-say="vagrancy" aria-label="Hear how to say vagrancy" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: the crime of being without a home or steady work; in 1865 it was used to arrest Black people who lacked a labor contract.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A QUICK PEACE</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Johnson's Plan</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Abraham Lincoln was shot in April 1865, and Andrew Johnson became president. Johnson was a Tennessee Democrat who had stayed loyal to the Union. In May, he announced a plan for bringing the Southern states back. Most Confederates could receive <a href="#glossary" title="an official pardon, usually for a group of people, for crimes against the government." style="color: inherit; text-decoration: underline dotted;"><strong>amnesty</strong></a> if they swore an oath of loyalty. Top leaders and the wealthiest planters had to apply for pardons one by one. Johnson also appointed a <a href="#glossary" title="temporary, meant to last only until a permanent arrangement is made." style="color: inherit; text-decoration: underline dotted;"><strong>provisional</strong></a> governor for each state. In Mississippi, he chose William L. Sharkey, a judge who had opposed secession.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Johnson asked the states to hold conventions, cancel secession, abolish slavery, and refuse to pay the Confederate debt. He did not ask them to let Black men vote. Mississippi's convention met in Jackson in August 1865. It canceled secession and wrote slavery out of the state constitution. Its members did so reluctantly, and many made clear they were only accepting what the war had already decided.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many white Mississippians believed that emancipation had been forced on them and that freedpeople would not work without compulsion. Planters complained of a labor shortage as some freedpeople left plantations to test their freedom or search for family. These worries shaped how the legislature approached its work.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In October, voters elected Benjamin G. Humphreys as governor. Humphreys had been a Confederate general, and Johnson pardoned him. The new legislature included many men who had served the Confederacy. In December, the legislature voted not to <a href="#glossary" title="to approve an amendment or treaty so that it officially takes effect." style="color: inherit; text-decoration: underline dotted;"><strong>ratify</strong></a> the Thirteenth Amendment, which ended slavery throughout the nation. Mississippi did not officially <a href="#glossary" title="to approve an amendment or treaty so that it officially takes effect." style="color: inherit; text-decoration: underline dotted;"><strong>ratify</strong></a> it until many years later.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Before you read on: President Johnson asked the states to cancel secession and end slavery, but he did not ask them to let Black men vote. What do you expect the new legislature to do first? (No wrong answer, just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="Keep reading to see what the legislature actually chose. Remember that no Black Mississippian could vote for the men who wrote these laws.">&#128220; Protect the rights of freedpeople</button>
+                <button data-response="Part 2 shows how the laws handled that question. Notice how many of the men in the legislature had served the Confederacy.">&#128274; Limit the freedom of freedpeople</button>
+                <button data-response="Some white Mississippians did hope the North would lose interest. The legislature, however, did not wait. It passed its first laws in November.">&#129300; Wait and see what the North does</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE BLACK CODES</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Freedom With Strings Attached</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In November 1865, the new legislature passed a group of laws called the <a href="#glossary" title="laws passed in Southern states in 1865 and 1866 that limited the rights and freedom of Black people." style="color: inherit; text-decoration: underline dotted;"><strong>Black Codes</strong></a>. Mississippi was one of the first states to pass them, and its laws were among the harshest. Some provisions gave Black people rights. They could marry legally, own personal property, make contracts, and sue in court. But the same laws took away much of what freedom was supposed to mean.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Black workers had to show a written labor contract, signed each January, or risk arrest for <a href="#glossary" title="the crime of being without a home or steady work; in 1865 it was used to arrest Black people who lacked a labor contract." style="color: inherit; text-decoration: underline dotted;"><strong>vagrancy</strong></a>. If a worker left a job before the contract ended, he could lose his wages. A freedperson who could not pay a <a href="#glossary" title="the crime of being without a home or steady work; in 1865 it was used to arrest Black people who lacked a labor contract." style="color: inherit; text-decoration: underline dotted;"><strong>vagrancy</strong></a> fine could be hired out to a white employer. Black people were barred from renting farmland outside of towns, which closed off the path to farming on their own. An apprentice law allowed courts to bind young Black people to white employers, with preference given to former owners. Black Mississippians were also barred from carrying firearms.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">County officials enforced these laws, and the men who enforced them were white. Within a few years, the state would also begin leasing prisoners to private employers, a practice you will meet again later in this course.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Together, these laws tried to keep Black workers tied to white landowners without calling it slavery. They solved one first-order problem, a steady supply of labor, by force.</p>
+        <div class="optima-widget ow-flipcard">
+            <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+            <div class="ow-flip" tabindex="0">
+                <div class="ow-flip-front" style="font-size:17px;color:#0E1C42;line-height:1.55;">The Black Codes gave Black Mississippians some rights and took others away. Name one right they gave and two they took away. Then tap the card to check.</div>
+                <div class="ow-flip-back" style="font-size:16px;line-height:1.55;">They gave Black Mississippians the right to marry legally, own personal property, make contracts, and sue in court. They took away much more: workers needed a written labor contract each January or risked arrest for vagrancy, they could not rent farmland outside of towns, courts could bind young people to white employers, and Black Mississippians could not carry firearms.</div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE RESPONSE</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Freedpeople and the Bureau</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The <a href="#glossary" title="a federal agency, created in 1865, that helped freed people with food, schools, and labor contracts." style="color: inherit; text-decoration: underline dotted;"><strong>Freedmen's Bureau</strong></a> tried to soften the blow. In Mississippi, Bureau agents handed out rations, watched over labor contracts, and helped open schools. They were few in number, and they faced hostility from many white Mississippians. Union soldiers, including Black regiments, remained in the state for a time. Governor Humphreys demanded their removal, and the Black troops were withdrawn within months.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Bureau agents also reported beatings and killings of freedpeople, and they found that local courts often refused to punish the attackers. A law that promised protection on paper meant little when the men enforcing it were unwilling.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Freedpeople did not wait for anyone else to act. They built churches and schools, searched for family members sold away, and met to discuss their future. Many hoped for land. A rumor spread across the South that the government would divide plantations among freedpeople at Christmas. Some white Mississippians feared an uprising and organized armed groups to guard against one.</p>
+        <div class="optima-widget ow-reveal">
+            <div class="widget-kicker">&#9999;&#65039; TRY IT FIRST</div>
+            <details><summary>In your notebook, explain in two or three sentences why a law that promised protection meant little to freedpeople in Mississippi in 1865. Then click here to compare.</summary><div class="reveal-body">A strong answer might say: <em>Bureau agents reported beatings and killings of freedpeople, but local courts often refused to punish the attackers. The men who enforced the laws were white and unwilling to enforce them fairly, so protection on paper did not become protection in practice.</em></div></details>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; CHOICE OR ACCIDENT?</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Weighing the Evidence</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that these were not the acts of an angry mob. A legislature passed them in regular session, a governor signed them, and courts enforced them. A Black Mississippian who had worn a Union uniform could walk past a courthouse and know that the law inside was written to bind him.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Was Mississippi's answer in 1865 a choice or an accident? Part of the answer lies in circumstances. Johnson's quick plan returned power to the men who had led the state before. No Black Mississippian could vote, and no Northern army stood ready to insist on fair laws. Those facts made harsh laws easier to pass. But the <a href="#glossary" title="laws passed in Southern states in 1865 and 1866 that limited the rights and freedom of Black people." style="color: inherit; text-decoration: underline dotted;"><strong>Black Codes</strong></a> did not write themselves. Men voted for them, and not every white Mississippian agreed. Other choices were possible.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By the Classical Republican standard used in this course, a government serves the common good when its laws apply fairly to the people it governs. These laws bound one group of citizens to servitude by statute. They failed that test.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Northern newspapers printed summaries of the Mississippi laws, and many readers saw slavery in a new form. The war had been fought, they felt, to end that system, and here it was returning under different names.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The North reacted strongly. Congress refused to seat Southern members, passed the Civil Rights Act of 1866 over Johnson's veto, and sent the Fourteenth Amendment to the states. Mississippi rejected it. What happened next, you will see in the coming modules.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; CHECK YOUR UNDERSTANDING</div>
+            <div class="widget-row" data-correct="c" data-hint="Think about what happened to workers who lacked a contract." data-fb="Right. A worker without a contract could be arrested for vagrancy, so the contract bound the worker to an employer.">
+                <div class="widget-row-prompt">Why did Mississippi's Black Codes require a written labor contract each January?</div>
+                <div class="widget-options">
+                    <button data-choice="a">To protect workers from unfair employers.</button>
+                    <button data-choice="b">To track how many workers lived in each county.</button>
+                    <button data-choice="c">To keep Black workers tied to white landowners under threat of arrest.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="b" data-hint="Recall what the legislature chose to do." data-fb="Right. The legislature voted against ratifying it.">
+                <div class="widget-row-prompt">True or false: Mississippi's legislature voted to ratify the Thirteenth Amendment in December 1865.</div>
+                <div class="widget-options">
+                    <button data-choice="a">True</button>
+                    <button data-choice="b">False</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Look at the first paragraph of Part 1." data-fb="Right. He asked for conventions to cancel secession and end slavery, but he did not ask for Black suffrage.">
+                <div class="widget-row-prompt">What did Johnson's plan require of Southern states returning to the Union?</div>
+                <div class="widget-options">
+                    <button data-choice="a">That they cancel secession and abolish slavery.</button>
+                    <button data-choice="b">That they allow Black men to vote.</button>
+                    <button data-choice="c">That they pay for the cost of the war.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Mississippi Black Code of 1865</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read the law in its own words.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading quiz and discussion</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Complete these in Canvas once you have finished both of this module's lessons.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The North would not accept the Black Codes. In the next module, Congress takes charge, Black Mississippians vote for the first time, and a new constitution rewrites the state's laws.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Peace and the Black Codes</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+
+<!-- ===== GLOSSARY AUDIO ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.gloss-audio');
+    if (!b || !('speechSynthesis' in window)) return;
+    var stop = document.getElementById('ora-stop');
+    if (stop && !stop.disabled) stop.click();
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(b.getAttribute('data-say'));
+    u.rate = 0.85;
+    var vs = window.speechSynthesis.getVoices().filter(function (v) { return /^en/i.test(v.lang); });
+    var v = vs.filter(function (x) { return /natural/i.test(x.name); })[0] || vs.filter(function (x) { return /google us english/i.test(x.name); })[0] || vs[0];
+    if (v) u.voice = v;
+    window.speechSynthesis.speak(u);
+  });
+})();
+</script>
+</body>
+</html>

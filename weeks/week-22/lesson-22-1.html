@@ -1,0 +1,535 @@
+<!--
+    Optima Academy Online - INTERACTIVE Student Lesson Page.
+    Mississippi History - The Last Years of the Confederacy in Mississippi
+    DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
+    Delete the .preview-banner before deploying.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mississippi History &mdash; The Last Years of the Confederacy in Mississippi</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .preview-banner { background: #fff3cd; border-bottom: 2px solid #c7922c; padding: 10px 24px; font-size: 13px; color: #6b4f1d; }
+    .preview-banner strong { color: #0e1c42; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">MISSISSIPPI HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q3</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Last Years of the Confederacy in Mississippi</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+<!-- ===== READ-ALOUD PLAYER ===== -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }], one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }], one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ===== END READ-ALOUD PLAYER ===== -->
+
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Last Years of the Confederacy in Mississippi</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">In February 1864, a Union army marched out of Vicksburg and across the middle of Mississippi, tearing up everything that could help the Confederacy. Many historians see it as a rehearsal for something bigger.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">After Vicksburg fell, the war did not leave Mississippi. For nearly two more years, raids and marches crossed the state, and the Confederacy slowly lost its power to fight there. This lesson follows Sherman's Meridian <a href="#glossary" title="a journey or military march made by a group for a specific purpose." style="color: inherit; text-decoration: underline dotted;"><strong>Expedition</strong></a>, the Confederate cavalry general who kept Union armies guessing, and the end of the war in Mississippi.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the Meridian Expedition and explain why Sherman launched it.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how Forrest's cavalry challenged Union plans in north Mississippi.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how and when the war ended in Mississippi.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> evaluate the war's effects on Mississippi's people and economy.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Internet access to view this lesson page and its linked primary sources</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or digital document for your reading notes</div>
+        </div>
+    </div>
+
+    <!-- GLOSSARY -->
+    <div id="glossary" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 12px;">A few words in this lesson are worth reviewing before you read.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">arsenal</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(AR-suh-nuhl)</span> <button type="button" class="gloss-audio" data-say="arsenal" aria-label="Hear how to say arsenal" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a place where weapons and ammunition are made or stored.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">emancipation</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(ih-man-suh-PAY-shuhn)</span> <button type="button" class="gloss-audio" data-say="emancipation" aria-label="Hear how to say emancipation" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: the act of freeing people from slavery.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">expedition</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(ek-spuh-DISH-uhn)</span> <button type="button" class="gloss-audio" data-say="expedition" aria-label="Hear how to say expedition" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a journey or military march made by a group for a specific purpose.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">forage</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(FOR-ij)</span> <button type="button" class="gloss-audio" data-say="forage" aria-label="Hear how to say forage" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: to search the countryside for food, especially food for soldiers and their animals.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">freedpeople</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(FREED-pee-puhl)</span> <button type="button" class="gloss-audio" data-say="freedpeople" aria-label="Hear how to say freedpeople" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: men, women, and children who had been enslaved and were now free.</div>
+        <div><strong style="color: #0E1C42; font-size: 17px;">regiment</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(REJ-uh-ment)</span> <button type="button" class="gloss-audio" data-say="regiment" aria-label="Hear how to say regiment" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: a large unit of soldiers, usually made up of about a thousand men.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; MARCH TO MERIDIAN</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Sherman Cuts the Railroad</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">After Vicksburg, the Union held the river, but the Confederates still held much of eastern Mississippi. Their strength rested on the railroads. Meridian, near the Alabama line, was a rail junction where two main lines crossed, and the Confederates kept supplies, hospitals, and an <a href="#glossary" title="a place where weapons and ammunition are made or stored." style="color: inherit; text-decoration: underline dotted;"><strong>arsenal</strong></a> there. As long as Meridian worked, Confederate armies in the West could be fed and moved.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In February 1864, William T. Sherman set out from Vicksburg with about twenty thousand men. They marched across central Mississippi in less than two weeks, and they had to <a href="#glossary" title="to search the countryside for food, especially food for soldiers and their animals." style="color: inherit; text-decoration: underline dotted;"><strong>forage</strong></a> as they went. Along the way they tore up railroad track, burned bridges, and wrecked mills and warehouses. Sherman stayed in Meridian for several days. In his report, he said that the town was gone. He meant that its depots, storehouses, and military buildings no longer existed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For the families in the army's path, the march meant lost corn, burned cribs, and fear. A farmer who watched thousands of soldiers pass could not tell whether his house would stand by evening. The Confederate government had little power left to protect him.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Sherman had hoped for help. A second column of about seven thousand Union cavalry was supposed to ride south from Memphis and join him. It never arrived. A Confederate force turned it back in a battle at Okolona, in the northeast, on February 22. Sherman marched back to Vicksburg without the second column, and the Confederates repaired part of the damage within weeks.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Thousands of enslaved people followed Sherman's columns, hoping for freedom. The Meridian march also showed a way of fighting that Sherman would use again in Georgia later that year. He believed that wrecking an enemy's railroads, farms, and storehouses could end a war as surely as winning battles. Many historians therefore see Meridian as a trial for the march that came after.</p>
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Before you read on: you are a farmer in central Mississippi in February 1864, and thousands of Union soldiers are marching toward your road. What worries you most? (No wrong answer, just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="That fear was real. The army had to forage as it went, and families in its path lost corn, burned cribs, and livestock.">&#127806; Losing my corn and animals</button>
+                <button data-response="Many farmers felt exactly this. A farmer who watched thousands of soldiers pass could not tell whether his house would stand by evening.">&#127968; Whether my house will stand</button>
+                <button data-response="The Confederate government had little power left to protect families in the army&rsquo;s path. Watch for how that weakness grows through this lesson.">&#128737;&#65039; That no one can protect me</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; FORREST</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Cavalry General Who Kept Union Armies Guessing</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Confederate who turned back that cavalry column was Nathan Bedford Forrest. Born into a poor family in Tennessee, Forrest became a slave trader and planter in Memphis. He joined the army as a private and rose to general without any military education. He was one of the most skilled cavalry commanders of the war. He moved fast, struck hard, and used surprise better than most trained officers.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In June 1864, a Union force of about eight thousand men under Samuel Sturgis marched into northeast Mississippi to keep Forrest away from Sherman's supply lines. At Brice's Crossroads, on June 10, Forrest attacked with fewer men and routed them. Soldiers in Sturgis's army, including Black <a href="#glossary" title="a large unit of soldiers, usually made up of about a thousand men." style="color: inherit; text-decoration: underline dotted;"><strong>regiments</strong></a>, suffered heavy losses. Many historians call it Forrest's finest battle.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Union commanders kept trying to catch him. In July 1864, another column marched to Tupelo and fought two days of hard battles against his forces. The Union held the field, but Forrest escaped and kept raiding. The lesson for Union leaders was plain: holding Mississippi's railroads and towns did not mean controlling the countryside.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Forrest's record cannot be told as military skill alone. In April 1864, at Fort Pillow in Tennessee, his troops killed many Black Union soldiers who were trying to surrender. Historians still debate how much blame he personally carries, but the event shaped how the North and Black soldiers saw him. After the war, many historians link him to the early Ku Klux Klan, which you will meet in the lesson &ldquo;The Klan and the Ames Government&rdquo;.</p>
+        <div class="optima-widget ow-flipcard">
+            <div class="widget-kicker">&#9889; TAP TO REVEAL</div>
+            <div class="ow-flip" tabindex="0">
+                <div class="ow-flip-front" style="font-size:17px;color:#0E1C42;line-height:1.55;">Union forces held the field at Tupelo in July 1864, yet Forrest kept raiding. What lesson did Union leaders take from that? Think it through, then tap the card.</div>
+                <div class="ow-flip-back" style="font-size:16px;line-height:1.55;">Holding Mississippi&rsquo;s railroads and towns did not mean controlling the countryside. Forrest escaped and kept raiding, so the Union could win a battlefield and still not win the region.</div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE END</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Surrender and Capture</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Through 1864, Union raids kept the Confederacy off balance in Mississippi. The state government moved from place to place, and its authority faded. In April 1865, Robert E. Lee surrendered his army in Virginia. In Mississippi, the end came a few weeks later. On May 4, Confederate forces under General Richard Taylor surrendered in Alabama. That surrender covered Mississippi, Alabama, and eastern Louisiana.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Confederate soldiers, many of them thin and barefoot, walked home without pay and found fields overgrown and families hungry. For many, the surrender was a relief, and for others it was a bitter end to years of sacrifice. For Black Mississippians, it was the day the last hope of the Confederacy ended, and many left the plantations that week to find family members or to see what freedom would hold.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Union troops arrested Governor Charles Clark that month. Jefferson Davis, who had fled Richmond, was captured in Georgia on May 10. He was held for two years at Fort Monroe in Virginia and released on bail in 1867. The government never put him on trial. The man who had stood in the Senate and said farewell to Washington in January 1861 now sat in a prison cell, and his state lay in ruins.</p>
+        <div class="optima-widget ow-reveal">
+            <div class="widget-kicker">&#9999;&#65039; TRY IT FIRST</div>
+            <details><summary>In your notebook, write two sentences: one on what the surrender meant for a Confederate soldier walking home, and one on what it meant for Black Mississippians. Then click here to compare.</summary><div class="reveal-body">A strong answer might say: <em>Confederate soldiers, many thin and barefoot, walked home without pay and found overgrown fields and hungry families. Some felt relief and some felt bitterness.</em> And: <em>For Black Mississippians it was the day the last hope of the Confederacy ended, and many left the plantations that week to find family members or to see what freedom would hold.</em></div></details>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; WHAT WAS LEFT</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Counting the Cost</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The numbers were stark. Tens of thousands of Mississippi men were dead, and many who came home had lost arms or legs. According to a number often cited, the state spent about one fifth of its 1866 revenue on artificial limbs. Railroads were torn up, levees along the river were damaged, and many farms had been stripped of livestock and fences. Confederate money and bonds were worthless, and many banks failed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><a href="#glossary" title="the act of freeing people from slavery." style="color: inherit; text-decoration: underline dotted;"><strong>Emancipation</strong></a> had also erased the state's largest form of property without payment to owners. For the <a href="#glossary" title="men, women, and children who had been enslaved and were now free." style="color: inherit; text-decoration: underline dotted;"><strong>freedpeople</strong></a>, freedom came with no land, little money, and almost no schools. Both groups faced the same hard question: what came next? In this course, you judge a state by how well it solves two first-order problems, keeping order and producing enough for people to live well. In 1865, Mississippi faced both problems at once.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; CHECK YOUR UNDERSTANDING</div>
+            <div class="widget-row" data-correct="b" data-hint="Recall what a railroad junction allows an army to do." data-fb="Right. Meridian was a rail junction, and wrecking it weakened Confederate supply in the West.">
+                <div class="widget-row-prompt">Why did Sherman march to Meridian?</div>
+                <div class="widget-options">
+                    <button data-choice="a">To capture the state capital.</button>
+                    <button data-choice="b">To wreck a railroad center that kept Confederate armies supplied.</button>
+                    <button data-choice="c">To rescue Union prisoners.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="a" data-hint="Think about the numbers on each side." data-fb="Right. Forrest attacked a larger force and routed it.">
+                <div class="widget-row-prompt">Which statement best describes Forrest at Brice's Crossroads?</div>
+                <div class="widget-options">
+                    <button data-choice="a">He won a victory against a larger Union force.</button>
+                    <button data-choice="b">His army was larger than the Union force.</button>
+                    <button data-choice="c">He retreated after a long siege.</button>
+                </div>
+            </div>
+            <div class="widget-row" data-correct="c" data-hint="Recall where he was held." data-fb="Right. He was held at Fort Monroe and released on bail in 1867, and he was never tried.">
+                <div class="widget-row-prompt">Which of these happened to Jefferson Davis after the war?</div>
+                <div class="widget-options">
+                    <button data-choice="a">He was elected governor of Mississippi.</button>
+                    <button data-choice="b">He was tried and executed for treason.</button>
+                    <button data-choice="c">He was imprisoned for two years and then released on bail.</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Peace and the Black Codes</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Continue on to see what Mississippi's leaders chose to do when the war was over.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Sherman, Report on the Meridian Expedition</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read Sherman's own account of the march.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading quiz and discussion</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Complete these in Canvas once you have finished both of this module's lessons.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The war was over, and one question remained: what kind of state would Mississippi become? In the next lesson, you will read the laws the state wrote in its first months of peace.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 3 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">The Last Years of the Confederacy in Mississippi</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+
+<!-- ===== GLOSSARY AUDIO ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.gloss-audio');
+    if (!b || !('speechSynthesis' in window)) return;
+    var stop = document.getElementById('ora-stop');
+    if (stop && !stop.disabled) stop.click();
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(b.getAttribute('data-say'));
+    u.rate = 0.85;
+    var vs = window.speechSynthesis.getVoices().filter(function (v) { return /^en/i.test(v.lang); });
+    var v = vs.filter(function (x) { return /natural/i.test(x.name); })[0] || vs.filter(function (x) { return /google us english/i.test(x.name); })[0] || vs[0];
+    if (v) u.voice = v;
+    window.speechSynthesis.speak(u);
+  });
+})();
+</script>
+</body>
+</html>

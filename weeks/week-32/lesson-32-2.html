@@ -1,0 +1,539 @@
+<!--
+    Optima Academy Online - INTERACTIVE Student Lesson Page.
+    Mississippi History - Local Government and Citizenship
+    DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mississippi History &mdash; Local Government and Citizenship</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
+    a.gl { color: #0E1C42; text-decoration: none; border-bottom: 1.5px dotted #1B6A94; }
+    a.gl:hover { background: #E8F6FB; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">MISSISSIPPI HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
+        <div style="font-size: 12px; color: #666;">How Mississippi Governs Itself</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Local Government and Citizenship</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">How Mississippi Governs Itself</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+<!-- ===== READ-ALOUD PLAYER ===== -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }], one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }], one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ===== END READ-ALOUD PLAYER ===== -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Local Government and Citizenship</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Mississippi has 82 counties. In each one, the courthouse is more than a building. It is where people record land deeds, serve on juries, pay property taxes, and, as you have seen, where in the 1960s they tried to register to vote. How does local government work, and what does a citizen owe it?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Most people meet their government at the county courthouse, the city hall, or the school board. This lesson shows how those local governments are built, who runs them, and what citizens are asked to do. It also asks why local self-government matters to a free people.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how a Mississippi county is organized, including its county seat and its board of supervisors.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how a county raises money and what local officers do.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> evaluate the duties of a citizen in a self-governing community.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Internet access to view this lesson page and its interactive checks</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or digital document for your reading notes</div>
+        </div>
+    </div>
+
+    <div id="glossary" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 12px;">A few words in this lesson are worth reviewing before you read.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">beat</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(beet)</span> <button type="button" class="gloss-audio" data-say="beat" aria-label="Hear how to say beat" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: In Mississippi, the name for each of the five districts of a county that elects a member of the board of supervisors.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">board of supervisors</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(bord uv soo-per-VY-zerz)</span> <button type="button" class="gloss-audio" data-say="board of supervisors" aria-label="Hear how to say board of supervisors" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: The five-member elected body that governs each Mississippi county, sets its tax rate, and oversees its roads and budget.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">county seat</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(KOWN-tee seet)</span> <button type="button" class="gloss-audio" data-say="county seat" aria-label="Hear how to say county seat" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: The town in a county where the courthouse and the main county offices are located.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">mill</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(mil)</span> <button type="button" class="gloss-audio" data-say="mill" aria-label="Hear how to say mill" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: A unit of property tax. One mill is one dollar of tax for every thousand dollars of a property's assessed value.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">separation of powers</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(sep-uh-RAY-shun uv POW-erz)</span> <button type="button" class="gloss-audio" data-say="separation of powers" aria-label="Hear how to say separation of powers" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: The idea that government power should be divided among separate branches so that no one group holds all of it.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; EIGHTY-TWO COUNTIES</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The County and Its Seat</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Mississippi is divided into 82 counties. A county is a part of the state that carries out state laws and provides local services such as roads, courts, and records. Each county has a <a class="gl" href="#glossary" title="The town in a county where the courthouse and the main county offices are located."><strong>county seat</strong></a>, the town where the courthouse and the main county offices are located. Some larger counties have two courthouse towns, such as Hinds County, which has Jackson and Raymond.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Counties came first in Mississippi history, long before most of its cities. Many of them are named for people you have read about, and many of the towns you have studied are county seats. Neshoba County's seat is Philadelphia. Sunflower County's is Indianola. Warren County's is Vicksburg. Lafayette County's is Oxford. Each courthouse reminds us where citizens go to take part in the life of their county.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What do counties do for the people who live in them? The courthouse is where a family records a deed to a piece of land, where a couple gets a marriage license, and where a person pays the tax on a car. It is also where trials are held and where jurors are called. Most people never visit the state capital, but nearly everyone has business at the county courthouse at some point.</p>
+<div class="optima-widget ow-select">
+  <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
+  <div class="widget-question">Check your understanding. Choose the county seat for each county.</div>
+  <div class="widget-row" data-fb="Yes. Philadelphia is where you read about the Freedom Summer murders." data-hint="Look back at the lesson &ldquo;Freedom Summer and Atlantic City&rdquo;.">
+    <div class="widget-row-prompt">What is the county seat of Neshoba County?</div>
+    <div class="widget-options"><button>Oxford</button><button>Indianola</button><button data-correct="1">Philadelphia</button><button>Vicksburg</button></div>
+  </div>
+  <div class="widget-row" data-fb="Right. Fannie Lou Hamer tried to register there in 1962." data-hint="Look back at the lesson &ldquo;The Long Fight for the Ballot&rdquo;.">
+    <div class="widget-row-prompt">What is the county seat of Sunflower County?</div>
+    <div class="widget-options"><button data-correct="1">Indianola</button><button>Oxford</button><button>Jackson</button><button>Philadelphia</button></div>
+  </div>
+  <div class="widget-row" data-fb="Yes. Oxford is home to the University of Mississippi." data-hint="Look back at the lesson &ldquo;James Meredith and Ross Barnett&rdquo;.">
+    <div class="widget-row-prompt">What is the county seat of Lafayette County?</div>
+    <div class="widget-options"><button>Vicksburg</button><button>Indianola</button><button>Hattiesburg</button><button data-correct="1">Oxford</button></div>
+  </div>
+  <div class="widget-row" data-fb="Right. Vicksburg was the site of the siege you studied earlier in the course." data-hint="Look back at the earlier lessons on the Civil War in Mississippi.">
+    <div class="widget-row-prompt">What is the county seat of Warren County?</div>
+    <div class="widget-options"><button data-correct="1">Vicksburg</button><button>Jackson</button><button>Oxford</button><button>Philadelphia</button></div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
+<div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+  <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; MISSISSIPPI HISTORY</div>
+  <div style="font-size: 17px; color: #0E1C42; margin-bottom: 8px;"><strong>Why So Many Small Counties?</strong></div>
+  <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">It is often said that Mississippi's counties were drawn small so that a farmer could ride a horse to the county seat and back in one day. Whether or not that explanation is exact, the idea fits the way the state was settled. In the nineteenth century, travel was slow, roads were poor, and a trip to court or to record a deed was a major event. A county courthouse was the place where a man could register land, pay taxes, serve on a jury, and see the law at work. Many county courthouses are still among the grandest buildings in their towns, and many sit in the center of a square. The old pattern still shapes how Mississippians think about local government. People often feel closer to their county than to the state capital.</div>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE BOARD OF SUPERVISORS</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Five Beats, Five Supervisors</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Each county is governed by a <a class="gl" href="#glossary" title="The five-member elected body that governs each Mississippi county, sets its tax rate, and oversees its roads and budget."><strong>board of supervisors</strong></a> of five members. Each supervisor is elected from one of five districts, which Mississippians call <a class="gl" href="#glossary" title="In Mississippi, the name for each of the five districts of a county that elects a member of the board of supervisors."><strong>beats</strong></a>. The board sets the county's tax rate, builds and repairs county roads and bridges, and approves the county budget. It usually meets at least once a month, and its meetings are open to the public.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Counties also elect other officers. The sheriff keeps order and runs the jail. The chancery clerk keeps land records and serves as clerk of the board. The circuit clerk keeps court records and, importantly, is in charge of voter registration. The tax assessor and collector sets the value of property and collects taxes. Each of these officers answers to the voters, not to the board. In this way the county, like the state, follows the <a class="gl" href="#glossary" title="The idea that government power should be divided among separate branches so that no one group holds all of it."><strong>separation of powers</strong></a>, in that no one person controls all of the county's work.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The way the five beats are drawn matters a great deal. In 1966, the legislature changed the rules to allow some counties to elect supervisors at large, so that all voters in a county could vote for all five seats. In counties where white voters were a majority, that would have made it hard for Black candidates to win. The Supreme Court ruled in 1969 that such changes needed federal review under the Voting Rights Act. A small rule about district lines can decide who holds power.</p>
+<div class="optima-widget ow-reveal">
+  <div class="widget-kicker">&#9999;&#65039; TRY IT FIRST</div>
+  <details><summary>In your notebook, write two sentences explaining why a small rule about district lines can decide who holds power. Then click here to compare.</summary><div class="reveal-body">A strong answer would say that electing supervisors at large lets the largest group of voters win all five seats. In counties where white voters were a majority, that would have made it hard for Black candidates to win. It would add that the Supreme Court ruled in 1969 that such changes needed federal review under the Voting Rights Act. Your wording may differ. Check that you gave reasons and used details from the lesson.</div></details>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; MONEY AND SCHOOLS</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">How Local Governments Pay</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Most county money comes from property taxes. The tax is measured in <a class="gl" href="#glossary" title="A unit of property tax. One mill is one dollar of tax for every thousand dollars of a property's assessed value."><strong>mills</strong></a>. One mill is one dollar of tax for every thousand dollars of assessed value. A home is assessed at only part of its market value. If a home is assessed at $10,000 and the rate is 100 mills, the owner pays $1,000 in tax. The board of supervisors sets the county rate, and schools and cities have rates of their own.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This matters because the people who set the rate and spend the money are neighbors. A supervisor who raises taxes may meet a voter at the grocery store the next day. That closeness has a good side, because officials can be held to account, and a bad side, because friends and family sometimes take care of one another first. Local government works best when citizens watch it.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Cities and towns have their own governments. Most have a mayor and a board of aldermen or a city council, elected by the voters. School districts have school boards, whose members are elected or appointed, depending on the district. The board hires a superintendent, sets the school budget, and decides how the district will use its money. These boards were at the center of the fight over desegregation, which is why who serves on them has long been important.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A school board is often the first office that a young adult can run for, and it is one of the few that lets a parent shape what happens in a classroom. Whoever sits on these boards helps decide what a community values and what it will pay for.</p>
+<div class="optima-widget ow-select">
+  <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
+  <div class="widget-question">Choose the best answer for each item.</div>
+  <div class="widget-row" data-fb="Yes. A mill is one dollar of tax for every thousand dollars of assessed value." data-hint="Reread the first paragraph of Part 3.">
+    <div class="widget-row-prompt">What does one mill mean?</div>
+    <div class="widget-options"><button data-correct="1">One dollar of tax for every thousand dollars of assessed value</button><button>One cent of tax for every dollar spent</button><button>One thousand dollars of tax on every home</button><button>One dollar of tax for every acre</button></div>
+  </div>
+  <div class="widget-row" data-fb="Right. At 100 mills, a $10,000 assessment means $1,000 in tax." data-hint="Reread the first paragraph of Part 3.">
+    <div class="widget-row-prompt">A home is assessed at $10,000 and the rate is 100 mills. How much tax does the owner pay?</div>
+    <div class="widget-options"><button>$10</button><button>$100</button><button>$10,000</button><button data-correct="1">$1,000</button></div>
+  </div>
+  <div class="widget-row" data-fb="Yes. Schools and cities have rates of their own." data-hint="Reread the first paragraph of Part 3.">
+    <div class="widget-row-prompt">Who sets the county tax rate?</div>
+    <div class="widget-options"><button>The governor</button><button data-correct="1">The board of supervisors</button><button>The Supreme Court</button><button>The sheriff</button></div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE CITIZEN</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What a Citizen Owes</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A free people must govern itself in small things before it can do so in large ones. Alexis de Tocqueville, who toured the United States in the 1830s, thought that local government was a school for citizens. In a town meeting or a county board, people learn to work with neighbors, argue without hatred, and deal with the real costs of public decisions.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What does a citizen owe? Voting is one duty. Serving on a jury is another. In many counties, jury lists are drawn from the voter rolls. That meant that keeping Black citizens off the rolls also kept them off juries, which helps explain why so many trials in this module ended as they did. Paying taxes, obeying laws, and attending public meetings are duties too.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Mississippi law also requires that most meetings of public boards be open to the public. Anyone may attend and listen. That law exists because a free people must be able to see how its money is spent and its decisions are made. A meeting no one attends is a meeting where only insiders have a say.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A citizen also has rights, and those rights are worth little unless they are used. People died for the right to register at a county courthouse. The duty to use it is part of what they left behind. In the discussion this week, you will judge whether the constitution that creates these offices is a good one. As you do, think about the citizens who must make it work.</p>
+<div class="optima-widget ow-reflect">
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">Before you move on: which duty of a citizen seems hardest to carry out well? (No wrong answer.)</div>
+  <div class="widget-options"><button data-response="Many people find this hard. It takes time to learn about candidates and issues, and the work is part of the duty.">Voting with knowledge</button><button data-response="Jury service takes time and can be difficult. It is also one of the few places where ordinary citizens hold real power.">Serving on a jury</button><button data-response="Very few people go. Yet those meetings decide matters that touch everyday life.">Attending local meetings</button></div>
+  <div class="widget-feedback"></div>
+  <button class="widget-reset">Reset</button>
+</div>
+<div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+  <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; MISSISSIPPI TODAY</div>
+  <div style="font-size: 17px; color: #0E1C42; margin-bottom: 8px;"><strong>Your County Today</strong></div>
+  <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">Most Mississippi counties post their meeting schedules and minutes online, and the board meetings are open to the public. If you want to see local government at work, you can look up your own county's board of supervisors, find out who represents your beat, and read what the board has decided. You may find that a few votes there affect your road, your school, or your property more directly than anything decided in Jackson or Washington. The details differ from county to county, and some counties do a better job of sharing information than others. The point is that the courthouse is open to you, as it was not to many of the people in this module.</div>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Mississippi Constitution of 1890, Article 1</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read Article 1 of the Mississippi Constitution of 1890, on the separation of powers.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Federalist No. 51</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Read Federalist No. 51.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: Is Mississippi's Constitution a Good Constitution?</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Take a position and support it with evidence from this module.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>VR Activity</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Complete the VR Activity in your VR headset when it is available in Canvas.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You have learned how Mississippi governs itself. Next week asks a harder question: why, despite so much richness in its history, the state has so often been poor.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Local Government and Citizenship</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-row').forEach(function (r) { r.classList.remove('solved'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      if (row.classList.contains('solved')) { return; }
+      row.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('incorrect'); });
+      var msg = document.createElement('div');
+      msg.className = 'row-feedback';
+      if (sBtn.dataset.correct === '1') {
+        sBtn.classList.add('correct');
+        row.classList.add('solved');
+        msg.classList.add('correct');
+        msg.textContent = row.dataset.fb || 'Correct.';
+      } else {
+        sBtn.classList.add('incorrect');
+        msg.classList.add('incorrect');
+        msg.textContent = row.dataset.hint || 'Not quite. Try again.';
+      }
+      row.appendChild(msg);
+      return;
+    }
+  });
+})();
+</script>
+
+<!-- ===== GLOSSARY AUDIO ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.gloss-audio');
+    if (!b || !('speechSynthesis' in window)) return;
+    var stop = document.getElementById('ora-stop');
+    if (stop && !stop.disabled) stop.click();
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(b.getAttribute('data-say'));
+    u.rate = 0.85;
+    var vs = window.speechSynthesis.getVoices().filter(function (v) { return /^en/i.test(v.lang); });
+    var v = vs.filter(function (x) { return /natural/i.test(x.name); })[0] || vs.filter(function (x) { return /google us english/i.test(x.name); })[0] || vs[0];
+    if (v) u.voice = v;
+    window.speechSynthesis.speak(u);
+  });
+})();
+</script>
+</body>
+</html>

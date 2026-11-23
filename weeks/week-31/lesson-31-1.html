@@ -1,0 +1,523 @@
+<!--
+    Optima Academy Online - INTERACTIVE Student Lesson Page.
+    Mississippi History - Black Power, Schools, and Violence
+    DEPLOYMENT: GitHub-hosted, embedded in Canvas via iframe.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mississippi History &mdash; Black Power, Schools, and Violence</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; text-align: left; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-reveal details { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; }
+    .ow-reveal summary { font-size: 16px; color: #0E1C42; cursor: pointer; line-height: 1.55; }
+    .ow-reveal .reveal-body { font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 10px; border-top: 1px solid #D0D9E8; padding-top: 10px; }
+    a.gl { color: #0E1C42; text-decoration: none; border-bottom: 1.5px dotted #1B6A94; }
+    a.gl:hover { background: #E8F6FB; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">MISSISSIPPI HISTORY</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q4</div>
+        <div style="font-size: 12px; color: #666;">A Changing State</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">Black Power, Schools, and Violence</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div>
+        <div style="font-size: 16px; color: #0e1c42;">A Changing State</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+<!-- ===== READ-ALOUD PLAYER ===== -->
+<div id="optima-read-aloud">
+<style>
+    #optima-read-aloud { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 14px 18px; margin: 0 0 20px 0; }
+    #optima-read-aloud .ora-kicker { font-size: 11px; color: #1B6A94; letter-spacing: 0.4px; margin-bottom: 10px; }
+    #optima-read-aloud .ora-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    #optima-read-aloud .ora-controls button { border-radius: 8px; padding: 8px 16px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.15s; }
+    #ora-play { background: #0E1C42; color: #FFFFFF; border: 1.5px solid #0E1C42; }
+    #ora-play:hover:enabled { background: #1B2D5E; }
+    #ora-play:disabled { background: #D0D9E8; border-color: #D0D9E8; color: #6b7a99; cursor: default; }
+    #ora-stop { background: #FFFFFF; color: #0E1C42; border: 1.5px solid #D0D9E8; }
+    #ora-stop:hover:enabled { background: #F4F6FA; border-color: #55C8E8; }
+    #ora-stop:disabled { color: #999; border-color: #E4E9F2; cursor: default; }
+    #optima-read-aloud .ora-speed { font-size: 12px; color: #6b7a99; display: flex; align-items: center; gap: 6px; }
+    #ora-rate { font-family: inherit; font-size: 13px; color: #0E1C42; border: 1.5px solid #D0D9E8; border-radius: 6px; padding: 5px 8px; background: #FFFFFF; }
+    #ora-status { font-size: 12px; color: #666; }
+    .ora-highlight { background: #FDF3E3 !important; box-shadow: inset 4px 0 0 #C7922C; border-radius: 4px; transition: background 0.2s; }
+</style>
+    <div class="ora-kicker">&#128266; READ ALOUD: LISTEN TO THIS PAGE</div>
+    <div class="ora-controls">
+        <button id="ora-play" type="button" aria-label="Listen to this page">&#9654;&#65039; Listen</button>
+        <button id="ora-stop" type="button" aria-label="Stop reading" disabled>&#9632; Stop</button>
+        <label class="ora-speed">Speed
+            <select id="ora-rate" aria-label="Reading speed">
+                <option value="0.8">Slower</option>
+                <option value="1" selected>Normal</option>
+                <option value="1.25">Faster</option>
+            </select>
+        </label>
+        <span id="ora-status" role="status" aria-live="polite"></span>
+    </div>
+<script>
+(function () {
+    "use strict";
+    var playBtn  = document.getElementById("ora-play");
+    var stopBtn  = document.getElementById("ora-stop");
+    var rateSel  = document.getElementById("ora-rate");
+    var statusEl = document.getElementById("ora-status");
+
+    if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) {
+        playBtn.disabled = true;
+        rateSel.disabled = true;
+        statusEl.textContent = "Read-aloud is not supported in this browser.";
+        return;
+    }
+
+    var LABEL_PLAY   = "Γû╢∩╕Å Listen";
+    var LABEL_PAUSE  = "ΓÅ╕∩╕Å Pause";
+    var LABEL_RESUME = "Γû╢∩╕Å Resume";
+    var BLOCK_SEL = "p, li, h1, h2, h3, h4, h5, h6, blockquote, td, th, dt, dd, figcaption, div";
+    var SKIP_SEL  = "#optima-read-aloud, [data-ra-skip], button, script, style, select, noscript, iframe";
+
+    var queue = [];        // [{ el, text }], one entry per sentence
+    var idx = 0;
+    var playing = false, paused = false, stopping = false;
+    var currentBlock = null;
+    var currentUtterance = null;  // held to dodge a Chrome garbage-collection bug
+
+    var voices = [];
+    function loadVoices() { voices = window.speechSynthesis.getVoices(); }
+    loadVoices();
+    if ("onvoiceschanged" in window.speechSynthesis) {
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    function pickVoice() {
+        if (!voices.length) loadVoices();
+        var en = voices.filter(function (v) { return /^en/i.test(v.lang); });
+        return en.filter(function (v) { return /natural/i.test(v.name); })[0]
+            || en.filter(function (v) { return /google us english/i.test(v.name); })[0]
+            || en.filter(function (v) { return v.default; })[0]
+            || en[0] || null;
+    }
+
+    function isVisible(el) {
+        return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
+    }
+
+    // Walk text nodes, attach each to its nearest block ancestor, split into sentences.
+    function collectQueue() {
+        var root = document.querySelector("[data-readaloud-root]")
+                || document.querySelector(".canvas-frame")
+                || document.body;
+        var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null, false);
+        var items = [];   // [{ el, text }], one entry per block, in reading order
+        var node;
+        while ((node = walker.nextNode())) {
+            if (!/\S/.test(node.textContent)) continue;
+            var el = node.parentElement;
+            if (!el || el.closest(SKIP_SEL)) continue;
+            if (!isVisible(el)) continue;
+            var block = el.closest(BLOCK_SEL) || root;
+            var last = items[items.length - 1];
+            if (last && last.el === block) last.text += " " + node.textContent;
+            else items.push({ el: block, text: node.textContent });
+        }
+        var q = [];
+        items.forEach(function (item) {
+            var clean = item.text.replace(/\s+/g, " ").trim();
+            if (!clean) return;
+            var sentences = clean.match(/[^.!?]+[.!?]+[ΓÇ¥"')\]]*\s*|[^.!?]+$/g) || [clean];
+            sentences.forEach(function (s) {
+                s = s.trim();
+                if (s) q.push({ el: item.el, text: s });
+            });
+        });
+        return q;
+    }
+
+    function highlight(el) {
+        if (el === currentBlock) return;
+        clearHighlight();
+        currentBlock = el;
+        if (el && el !== document.body) {
+            el.classList.add("ora-highlight");
+            try { el.scrollIntoView({ behavior: "smooth", block: "nearest" }); } catch (e) {}
+        }
+    }
+    function clearHighlight() {
+        if (currentBlock) currentBlock.classList.remove("ora-highlight");
+        currentBlock = null;
+    }
+
+    function speakNext() {
+        if (idx >= queue.length) { finish("Finished reading this page."); return; }
+        var item = queue[idx];
+        highlight(item.el);
+        var u = new SpeechSynthesisUtterance(item.text);
+        u.rate = parseFloat(rateSel.value) || 1;
+        var v = pickVoice();
+        if (v) u.voice = v;
+        u.onend = function () {
+            if (stopping) return;
+            idx++;
+            speakNext();
+        };
+        u.onerror = function (e) {
+            if (stopping || e.error === "canceled" || e.error === "interrupted") return;
+            idx++;
+            speakNext();
+        };
+        currentUtterance = u;
+        window.speechSynthesis.speak(u);
+        statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+    }
+
+    function finish(message) {
+        playing = false;
+        paused = false;
+        clearHighlight();
+        playBtn.textContent = LABEL_PLAY;
+        stopBtn.disabled = true;
+        statusEl.textContent = message || "";
+        currentUtterance = null;
+    }
+
+    playBtn.addEventListener("click", function () {
+        if (playing && !paused) {
+            window.speechSynthesis.pause();
+            paused = true;
+            playBtn.textContent = LABEL_RESUME;
+            statusEl.textContent = "Paused";
+            return;
+        }
+        if (playing && paused) {
+            window.speechSynthesis.resume();
+            paused = false;
+            playBtn.textContent = LABEL_PAUSE;
+            statusEl.textContent = "ReadingΓÇª " + (idx + 1) + " / " + queue.length;
+            return;
+        }
+        queue = collectQueue();
+        if (!queue.length) { statusEl.textContent = "Nothing to read on this page."; return; }
+        idx = 0;
+        stopping = false;
+        playing = true;
+        paused = false;
+        window.speechSynthesis.cancel();
+        playBtn.textContent = LABEL_PAUSE;
+        stopBtn.disabled = false;
+        speakNext();
+    });
+
+    stopBtn.addEventListener("click", function () {
+        stopping = true;
+        window.speechSynthesis.cancel();
+        finish("");
+    });
+
+    // Changing speed mid-read restarts the current sentence at the new rate.
+    rateSel.addEventListener("change", function () {
+        if (!playing || paused) return;
+        stopping = true;
+        window.speechSynthesis.cancel();
+        setTimeout(function () { stopping = false; speakNext(); }, 60);
+    });
+
+    window.addEventListener("pagehide", function () { window.speechSynthesis.cancel(); });
+})();
+</script>
+</div>
+<!-- ===== END READ-ALOUD PLAYER ===== -->
+
+
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Black Power, Schools, and Violence</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">In June 1966, James Meredith set out to walk across Mississippi alone. On his second day, a man with a shotgun shot him beside the highway. When others finished the march, a new slogan rang out that would divide the movement. Why did some activists begin to lose faith in the old methods?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">By the middle of the 1960s, the movement had won laws, but the laws did not yet change daily life in Mississippi. This lesson follows the March Against Fear, the debate over Black Power, a deadly attack in Hattiesburg, and the long struggle over the schools that ended in 1969.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what happened on the March Against Fear and why the phrase Black Power caused debate.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe the attack on Vernon Dahmer and what it showed about the danger that remained.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why the freedom-of-choice plans failed and what the Supreme Court ordered in 1969.</div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Internet access to view this lesson page and its interactive checks</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook or digital document for your reading notes</div>
+        </div>
+    </div>
+
+    <div id="glossary" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #1B6A94; margin-bottom: 10px;">&#128161; GLOSSARY</div>
+        <div style="font-size: 15px; color: #0E1C42; margin-bottom: 12px;">A few words in this lesson are worth reviewing before you read.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">Black Power</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(BLAK POW-er)</span> <button type="button" class="gloss-audio" data-say="Black Power" aria-label="Hear how to say Black Power" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: A slogan and idea of the late 1960s that urged Black communities to build their own political, economic, and cultural strength. People disagreed about what it meant.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">dual school system</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(DOO-ul skool SIS-tum)</span> <button type="button" class="gloss-audio" data-say="dual school system" aria-label="Hear how to say dual school system" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: A system with one set of schools for white students and another for Black students.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">freedom-of-choice plan</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(FREE-dum uv CHOYS plan)</span> <button type="button" class="gloss-audio" data-say="freedom-of-choice plan" aria-label="Hear how to say freedom-of-choice plan" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: A school plan that let families choose which school their children attended. In practice, few families chose to cross the color line, and most schools stayed segregated.</div>
+        <div style="margin-bottom: 10px;"><strong style="color: #0E1C42; font-size: 17px;">segregation academy</strong> <span data-ra-skip style="color: #666; font-size: 14px;">(seg-rih-GAY-shun uh-KAD-uh-mee)</span> <button type="button" class="gloss-audio" data-say="segregation academy" aria-label="Hear how to say segregation academy" title="Hear it" style="background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 50%; width: 28px; height: 28px; font-size: 14px; line-height: 1; cursor: pointer; vertical-align: middle; padding: 0;">&#128266;</button>: A private school started so that white children could avoid attending desegregated public schools.</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE MARCH AGAINST FEAR</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Meredith Walks Again</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In June 1966, James Meredith announced a march from Memphis to Jackson, a distance of about 220 miles. He wanted to show Black Mississippians that they did not have to live in fear. On June 6, near Hernando, a man named Aubrey Norvell shot him with a shotgun. Meredith was badly hurt but survived. Norvell pleaded guilty and went to prison.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Civil rights leaders decided to finish the march. Martin Luther King Jr., Stokely Carmichael of SNCC, and Floyd McKissick of CORE joined local people on the road. They camped in churches and fields and signed up thousands of people to vote along the way. On June 26 about fifteen thousand people marched into Jackson. Meredith, who had recovered, joined them for the last stretch.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The march was hard on the road. Marchers walked through summer heat, and local people brought water and food. On June 21, the second anniversary of the Neshoba murders, King led a memorial service in Philadelphia, where officers and onlookers glared at the crowd. Two days later in Canton, state troopers fired tear gas at marchers who tried to set up camp at a school, and many people were hurt. The march showed both the hope and the danger of the time.</p>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128368; JUNE 1966</div>
+    <div style="display: flex; gap: 14px; align-items: flex-start; margin-bottom: 10px;"><div style="min-width: 78px; font-size: 15px; color: #FFFFFF; background: #0E1C42; border-radius: 6px; padding: 4px 8px; text-align: center;">June 5</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Meredith begins his walk from Memphis.</div></div>
+    <div style="display: flex; gap: 14px; align-items: flex-start; margin-bottom: 10px;"><div style="min-width: 78px; font-size: 15px; color: #FFFFFF; background: #0E1C42; border-radius: 6px; padding: 4px 8px; text-align: center;">June 6</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Meredith is shot near Hernando.</div></div>
+    <div style="display: flex; gap: 14px; align-items: flex-start; margin-bottom: 10px;"><div style="min-width: 78px; font-size: 15px; color: #FFFFFF; background: #0E1C42; border-radius: 6px; padding: 4px 8px; text-align: center;">June 16</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Carmichael speaks in Greenwood and the slogan Black Power is heard across the nation.</div></div>
+    <div style="display: flex; gap: 14px; align-items: flex-start; margin-bottom: 10px;"><div style="min-width: 78px; font-size: 15px; color: #FFFFFF; background: #0E1C42; border-radius: 6px; padding: 4px 8px; text-align: center;">June 26</div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">About 15,000 people arrive in Jackson.</div></div>
+</div>
+<div class="optima-widget ow-select">
+  <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
+  <div class="widget-question">Choose the best answer for each item.</div>
+  <div class="widget-row" data-fb="Yes. He wanted people to see that they did not have to live in fear." data-hint="Reread the first paragraph of Part 1.">
+    <div class="widget-row-prompt">Why did James Meredith plan his march from Memphis to Jackson?</div>
+    <div class="widget-options"><button>To run for governor</button><button>To raise money for a college</button><button data-correct="1">To show Black Mississippians they did not have to live in fear</button><button>To protest a school closing</button></div>
+  </div>
+  <div class="widget-row" data-fb="Right. Aubrey Norvell shot him with a shotgun, and Meredith survived." data-hint="Check the June 1966 timeline.">
+    <div class="widget-row-prompt">What happened to Meredith on June 6 near Hernando?</div>
+    <div class="widget-options"><button data-correct="1">He was shot and badly hurt, but he survived</button><button>He was arrested and sent home</button><button>He gave a speech to fifteen thousand people</button><button>He met Martin Luther King Jr. in Jackson</button></div>
+  </div>
+  <div class="widget-row" data-fb="Yes. About fifteen thousand people arrived in Jackson." data-hint="Check the June 1966 timeline.">
+    <div class="widget-row-prompt">About how many people marched into Jackson on June 26?</div>
+    <div class="widget-options"><button>About 150</button><button>About 1,500</button><button>About 150,000</button><button data-correct="1">About 15,000</button></div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; BLACK POWER</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Slogan and an Argument</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On the night of June 16, in Greenwood, Carmichael was arrested and then released. He told a crowd that Black people needed <a class="gl" href="#glossary" title="A slogan and idea of the late 1960s that urged Black communities to build their own political, economic, and cultural strength. People disagreed about what it meant."><strong>Black Power</strong></a>. Many in the crowd cheered. Others in the movement were alarmed. Some worried that the phrase would frighten supporters. Others thought it sounded as if Black people wanted to separate from white Americans.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What did it mean? Carmichael and his supporters said it meant that Black communities should gain political strength, elect their own leaders, run their own businesses, and take pride in their history. After years of beatings and broken promises, many young organizers had lost faith in asking for fairness. Critics such as Roy Wilkins of the NAACP feared that the slogan would divide the movement and give its enemies an excuse. Dr. King defended the movement's goals but warned against any message of hatred.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that both sides wanted Black Mississippians to have a voice. They differed on how to get it, and on whom to count on. In Mississippi the argument took place beside daily work: registering voters, running schools, and surviving.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Black Power also showed up in local projects. In 1965 Black Mississippians ran one of the first Head Start programs in the nation, called the Child Development Group of Mississippi. It served thousands of children and hired local teachers. Some state leaders, including Senator John Stennis, attacked the program and worked to cut its money. The fight showed how much it mattered to Black Mississippians to run an institution of their own, and how much some white leaders resisted it.</p>
+<div class="optima-widget ow-reflect">
+  <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+  <div class="widget-question">Before you read on: when a movement meets violence year after year, what should it do? (No wrong answer.)</div>
+  <div class="widget-options"><button data-response="That was the view of many church leaders. They argued that patience and nonviolence had won sympathy across the nation.">Stay with the same methods</button><button data-response="That was the view of many younger organizers. They believed that years of waiting had brought too little.">Try new methods</button><button data-response="Many people in the movement did just that, and you will see how.">Use more than one method</button></div>
+  <div class="widget-feedback"></div>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; HATTIESBURG</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Murder of Vernon Dahmer</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Danger did not end with new laws. Vernon Dahmer was a businessman and farmer in Hattiesburg and a leader of the local NAACP. After the Voting Rights Act passed, he began collecting poll taxes for his neighbors and allowed people to register at his store, so that those who could not afford the fee could still vote. In January 1966 he announced that he would help even more people.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">On the night of January 10, men from the Klan group called the White Knights firebombed his house and fired into it. Dahmer shot back from inside to hold them off while his wife and children escaped through a back window. He was badly burned and died the next day. Several men were charged, but the first trials ended without convictions. The Klan leader Sam Bowers was finally convicted of murder in 1998, thirty-two years later.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Violence like this declined after 1967. The federal trial in the Neshoba case had put Klan leaders in prison, and the FBI had placed informants inside the Klan. Some state leaders began to say publicly that violence was bad for Mississippi. But the damage had been done, and Black Mississippians who registered or petitioned could not be sure of safety even then.</p>
+<div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 16px 22px; margin: 16px 0;">
+  <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; MISSISSIPPI HISTORY</div>
+  <div style="font-size: 17px; color: #0E1C42; margin-bottom: 8px;"><strong>Marian Wright and the Legal Fight</strong></div>
+  <div style="font-size: 16px; color: #1a2340; line-height: 1.6;">In 1965 Marian Wright became the first Black woman admitted to the Mississippi bar. She opened an office in Jackson for the NAACP Legal Defense Fund, and she took on cases that few lawyers would touch. She represented people arrested in protests, and she worked on voting and school cases across the state. Mississippi was a hard place to practice that kind of law. Judges, clerks, and neighbors often treated her as an outsider. She kept at it. Later she moved to Washington and founded the Children's Defense Fund, which works for children in poverty. Her story reminds us that the movement needed lawyers as well as marchers, and that the courts, slow as they were, kept offering a path when other doors were closed.</div>
+</div>
+<div class="optima-widget ow-reveal">
+  <div class="widget-kicker">&#9999;&#65039; TRY IT FIRST</div>
+  <details><summary>In your notebook, write two sentences explaining why violence like the attack on Vernon Dahmer began to decline after 1967. Then click here to compare.</summary><div class="reveal-body">A strong answer would say that the federal trial in the Neshoba case put Klan leaders in prison, and that the FBI had placed informants inside the Klan. It would add that some state leaders began to say publicly that violence was bad for Mississippi. Your wording may differ. Check that you gave reasons and used details from the lesson.</div></details>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE SCHOOLS</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Freedom of Choice and Its Failure</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Brown v. Board of Education was decided in 1954, but most Mississippi schools stayed segregated for fifteen more years. The state still ran a <a class="gl" href="#glossary" title="A system with one set of schools for white students and another for Black students."><strong>dual school system</strong></a>. After the Civil Rights Act of 1964, many districts adopted a <a class="gl" href="#glossary" title="A school plan that let families choose which school their children attended. In practice, few families chose to cross the color line, and most schools stayed segregated."><strong>freedom-of-choice plan</strong></a>. In theory, any family could pick any school. In practice, Black families who chose a white school faced threats, lost jobs, and sometimes had shots fired at their homes. Very few tried, and the schools stayed almost entirely separate.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1968 the Supreme Court ruled in Green v. New Kent County that such plans were not enough if the old system remained in place. Mississippi delayed. In 1969, lawyers for Black families in Holmes County asked the Court to end the delay. On October 29, 1969, in Alexander v. Holmes County Board of Education, the Court ruled that districts must stop operating segregated schools immediately. The phrase all deliberate speed had run out.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Court's decision came after the federal government had asked for more time. The Court said no. It held that continued delay violated the rights of Black children, who had waited fifteen years since Brown. The ruling did not end the argument, but it ended the excuse of delay. For the first time, lawyers and parents could point to an order that left no room to wait.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Many Mississippi districts were ordered to merge their Black and white schools in the middle of the school year. Some white families responded by leaving the public schools. Beginning in the mid-1960s, they started private schools, often called <a class="gl" href="#glossary" title="A private school started so that white children could avoid attending desegregated public schools."><strong>segregation academies</strong></a>, and the number grew quickly after 1969. You will read more about the results in the next lesson.</p>
+<div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 5px solid #C7922C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+  <div style="font-size: 11px; color: #c7922c; margin-bottom: 10px;">&#128202; TWO WAYS TO SOLVE THE SCHOOL QUESTION</div>
+  <table style="width: 100%; border-collapse: collapse; font-size: 15px; color: #1a2340; line-height: 1.5;">
+    <tr><th style="text-align: left; background: #0E1C42; color: #FFFFFF; padding: 8px 10px; font-weight: normal;">Plan</th><th style="text-align: left; background: #0E1C42; color: #FFFFFF; padding: 8px 10px; font-weight: normal;">How it worked</th><th style="text-align: left; background: #0E1C42; color: #FFFFFF; padding: 8px 10px; font-weight: normal;">Result in Mississippi</th></tr>
+    <tr><td style="padding: 8px 10px; border-bottom: 1px solid #D0D9E8; vertical-align: top;">Freedom of choice</td><td style="padding: 8px 10px; border-bottom: 1px solid #D0D9E8; vertical-align: top;">Families chose a school. The district did not redraw any lines.</td><td style="padding: 8px 10px; border-bottom: 1px solid #D0D9E8; vertical-align: top;">Few Black families dared to choose, and the schools stayed segregated.</td></tr>
+    <tr><td style="padding: 8px 10px; border-bottom: 1px solid #D0D9E8; vertical-align: top;">Order to end the dual system</td><td style="padding: 8px 10px; border-bottom: 1px solid #D0D9E8; vertical-align: top;">The court told districts to combine the schools.</td><td style="padding: 8px 10px; border-bottom: 1px solid #D0D9E8; vertical-align: top;">Schools were merged, but many white families left for private schools.</td></tr>
+  </table>
+</div>
+<div class="optima-widget ow-select">
+  <div class="widget-kicker">&#9989; CHECK YOUR UNDERSTANDING</div>
+  <div class="widget-question">Check your understanding. Choose the best answer for each item.</div>
+  <div class="widget-row" data-fb="Yes. The phrase caused a strong debate within the movement." data-hint="Reread Part 2.">
+    <div class="widget-row-prompt">Which slogan did Stokely Carmichael make famous on the March Against Fear?</div>
+    <div class="widget-options"><button>Freedom Now</button><button>We Shall Overcome</button><button data-correct="1">Black Power</button><button>Equal Pay</button></div>
+  </div>
+  <div class="widget-row" data-fb="Right. His voting work made him a target." data-hint="Reread Part 3.">
+    <div class="widget-row-prompt">Why did Vernon Dahmer's house come under attack?</div>
+    <div class="widget-options"><button>He was running for governor</button><button data-correct="1">He helped neighbors register to vote and paid their poll taxes</button><button>He had refused to pay his taxes</button><button>He was a federal marshal</button></div>
+  </div>
+  <div class="widget-row" data-fb="Yes. The Court ended the long delay." data-hint="Reread Part 4.">
+    <div class="widget-row-prompt">What did the Supreme Court decide in Alexander v. Holmes County?</div>
+    <div class="widget-options"><button>Schools could take up to ten more years to desegregate</button><button>States could close all public schools</button><button data-correct="1">Districts must end segregated schools immediately</button><button>Only Delta schools had to change</button></div>
+  </div>
+  <button class="widget-reset">Reset</button>
+</div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>The Open State</strong></div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Continue to see what changed in Mississippi, and what did not, in the years after 1969.</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; LOOKING AHEAD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">The Court's order did not end the story. The lesson &ldquo;The Open State&rdquo; follows Mississippi after 1969: its first Black officeholders in nearly a century, the fight over its colleges, and the long work of repairing what had been broken.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; MISSISSIPPI HISTORY &middot; Quarter 4 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Black Power, Schools, and Violence</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.widget-row').forEach(function (r) { r.classList.remove('solved'); });
+      w.querySelectorAll('details').forEach(function (d) { d.removeAttribute('open'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      if (row.classList.contains('solved')) { return; }
+      row.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('incorrect'); });
+      var msg = document.createElement('div');
+      msg.className = 'row-feedback';
+      if (sBtn.dataset.correct === '1') {
+        sBtn.classList.add('correct');
+        row.classList.add('solved');
+        msg.classList.add('correct');
+        msg.textContent = row.dataset.fb || 'Correct.';
+      } else {
+        sBtn.classList.add('incorrect');
+        msg.classList.add('incorrect');
+        msg.textContent = row.dataset.hint || 'Not quite. Try again.';
+      }
+      row.appendChild(msg);
+      return;
+    }
+  });
+})();
+</script>
+
+<!-- ===== GLOSSARY AUDIO ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('.gloss-audio');
+    if (!b || !('speechSynthesis' in window)) return;
+    var stop = document.getElementById('ora-stop');
+    if (stop && !stop.disabled) stop.click();
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(b.getAttribute('data-say'));
+    u.rate = 0.85;
+    var vs = window.speechSynthesis.getVoices().filter(function (v) { return /^en/i.test(v.lang); });
+    var v = vs.filter(function (x) { return /natural/i.test(x.name); })[0] || vs.filter(function (x) { return /google us english/i.test(x.name); })[0] || vs[0];
+    if (v) u.voice = v;
+    window.speechSynthesis.speak(u);
+  });
+})();
+</script>
+</body>
+</html>
